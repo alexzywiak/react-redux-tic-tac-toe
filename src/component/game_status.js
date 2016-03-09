@@ -19,14 +19,17 @@ class GameStatus extends Component {
 
   render(){
     return (
-      <div>
-        <p>{this.renderTurn()}</p>
-        <p>{this.renderWinner()}</p>
-        { this.props.winner ? 
-          <button 
-            onClick={this.props.clearBoard}>
-            New Game
-            </button> : null}
+      <div className="row game-status">
+        <div className="col-md-6 col-md-offset-3">
+          <h4>{this.renderTurn()}</h4>
+          <h2>{this.renderWinner()}</h2>
+          { this.props.winner ? 
+            <button
+              className="btn btn-primary btn-block" 
+              onClick={this.props.clearBoard}>
+              New Game
+              </button> : null}
+        </div>
       </div>
     );
   }

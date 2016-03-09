@@ -24,9 +24,13 @@ class Grid extends Component {
 
   render(){
     return (
-      <table className="table">
-        <tbody>{this.renderBoard()}</tbody>
-      </table>
+      <div className="row game-board">
+        <div className="col-md-12">
+          <table className="table table-bordered">
+            <tbody>{this.renderBoard()}</tbody>
+          </table>
+        </div>
+      </div>
     );
   }
 }
